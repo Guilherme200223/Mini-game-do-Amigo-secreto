@@ -1,0 +1,232 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-button-disabled: #d3d3d3;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Input */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    box-shadow: none;
+}
+
+/* Botão adicionar */
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+    border: 2px solid #000;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Botões do container */
+.button-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px;
+    width: 100%;
+}
+
+.button-container button img {
+    width: 24px;
+    height: 24px;
+}
+
+.button-container button:hover:not(:disabled) {
+    background-color: var(--color-button-hover);
+}
+
+.button-container button:disabled {
+    background-color: var(--color-button-disabled);
+    cursor: not-allowed;
+}
+
+/* Botão Novo Jogo */
+.button-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.button-new img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+
+.button-new span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.button-new:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mensagens */
+.note {
+    color: red;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.warning {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+.button-remove {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.button-remove:hover {
+    transform: scale(1.2);
+}

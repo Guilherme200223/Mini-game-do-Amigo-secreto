@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini gamer do Amigo secreto</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ResponsiveVoice -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+</head>
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Mini gamer do Amigo Secreto</h1>
+            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto">
+        </header>
+
+        <section class="input-section">
+            <h2 class="section-title">Digite o nome dos seus amigos</h2>
+
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
+                <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
+            </div>
+
+            <!-- Mensagem de orientação -->
+            <p class="note">Adicione pelo menos dois nomes na lista!</p>
+
+            <!-- Mensagem de aviso ao iniciar o sorteio -->
+            <p id="avisoLista" class="warning">A lista foi fechada! Não é possível remover ou adicionar novos nomes após iniciar o sorteio.</p>
+
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <ul id="resultado" class="result-list" aria-live="polite"></ul>
+
+            <div class="button-container">
+                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                    <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
+                    Sortear amigo
+                </button>
+
+                <button class="button-new" onclick="novoJogo()" aria-label="Iniciar novo jogo">
+                    <img src="assets/play_circle_outline.png" alt="Ícone de reiniciar">
+                    <span>Novo Jogo</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script principal -->
+    <script src="app.js" defer></script>
+</body>
+</html>
